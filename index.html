@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function getRandomColor() {
+        //To give me a new rgb number everytime
+        return Math.floor(Math.random() * (255 - 10)) + 10;
+      }
+
+      function getColor() {
+        return `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+      }
+
+      (function changeColor() {
+        setInterval(() => (document.body.style.background = getColor()), 1000);
+      })();
+    </script>
+  </head>
+  <body class="ease-in-out">
+    <div class="w-full text-center h-screen flex justify-center items-center">
+      <div class="text-9xl h-fit">Tuyen: Confirm!</div>
+    </div>
+  </body>
+</html>
